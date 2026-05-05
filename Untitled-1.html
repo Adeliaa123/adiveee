@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание чат-ботов на Python | Главная</title>
+    <!-- Подключение шрифтов -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --light-blue: #a2d2ff;
+            --gray: #6c757d;
+            --light-gray: #f4f7f6;
+            --white: #ffffff;
+            --dark: #333;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light-gray);
+            margin: 0;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Навигация */
+        nav {
+            background: var(--white);
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--gray);
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--light-blue);
+        }
+
+        /* Шапка */
+        header {
+            background-color: var(--light-blue);
+            padding: 60px 20px;
+            text-align: center;
+            color: var(--dark);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        /* Основной контент */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            border-left: 5px solid var(--light-blue);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .intro-text {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Карточка видеоурока */
+        .video-section {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #eee;
+            margin-top: 30px;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            color: #777;
+        }
+
+        /* Кнопки */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--light-blue);
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #8ec0ef;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--gray);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="Untitled-1.html" class="active">Главная</a>
+    <a href="#video">Видео</a>
+    <a href="Untitled-2.html">Проверка знаний</a>
+    <a href="profile.html">Личный кабинет</a>
+</nav>
+
+<header>
+    <h1>Создание чат-ботов на Python</h1>
+    <p>Образовательный курс для учеников 10-11 классов</p>
+</header>
+
+<div class="container">
+
+
+
+<h2>Введение в разработку ботов</h2>
+    <p class="intro-text">
+        Чат-боты — это программы, которые имитируют общение с реальным пользователем. 
+        В Python самыми популярными библиотеками для этого являются <b>aiogram</b> или <b>telebot</b>.
+        
+
+        Для начала работы вам понадобится Token, который можно получить у <a href="https://t.me" target="_blank" style="color: var(--light-blue);">@id199142634 (@BotFather)</a> в Telegram.
+    </p>
+
+    <div id="video" class="video-section">
+        <h3>Видео-урок: Первый бот</h3>
+        <div class="video-placeholder">
+           <iframe
+        width="830"
+        height="550"
+        src="https://rutube.ru/play/embed/862ab8b32d210da45f4ff0045dd2ee82"
+        style="border: none;"
+        allow="clipboard-write; autoplay"
+        allowFullScreen
+      ></iframe>
+          
+        </div>
+        <p>Посмотрите короткое введение, чтобы понять структуру простейшего эхо-бота.</p>
+    </div>
+
+    <div class="btn-group">
+        <a href="quiz.html" class="btn">Перейти к тесту</a>
+        <a href="profile.html" class="btn" style="background: #eee;">Мой профиль</a>
+    </div>
+</div>
+
+<footer>
+    &copy; 2024 Курс по Python для старшеклассников. Размещено на GitHub Pages.
+</footer>
+
+</body>
+</html>

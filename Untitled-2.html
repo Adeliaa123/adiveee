@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка знаний | Курс Python</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --light-blue: #a2d2ff;
+            --gray: #6c757d;
+            --light-gray: #f8f9fa;
+            --white: #ffffff;
+            --dark: #333;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light-gray);
+            margin: 0;
+            color: var(--dark);
+        }
+
+        header {
+            background-color: var(--light-blue);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: var(--white);
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--gray);
+            font-family: 'Lato', sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .question {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-left: 5px solid var(--light-blue);
+            background: #fdfdfd;
+        }
+
+        h2 { color: var(--dark); }
+        
+        label {
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+        }
+
+        button {
+            background-color: var(--light-blue);
+            color: var(--dark);
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #8ec0ef;
+            transform: translateY(-2px);
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="Untitled-1.html">Главная</a>
+    <a href="Untitled-1.html">Видео</a>
+    <a href="quiz.html"><b>Проверка знаний</b></a>
+    <a href="profile.html">Личный кабинет</a>
+</nav>
+
+<header>
+    <h1>Проверка знаний</h1>
+    <p>Проверь, как ты усвоил материал по созданию чат-ботов</p>
+</header>
+
+<div class="container">
+    <form id="quizForm">
+        <div class="question">
+            <p><b>1. С помощью какого бота в Telegram можно создать нового бота и получить токен?</b></p>
+            <label><input type="radio" name="q1" value="correct"> @id199142634 (@BotFather)</label>
+            <label><input type="radio" name="q1" value="wrong"> @ControllerBot</label>
+            <label><input type="radio" name="q1" value="wrong"> @id51682336 (@MyBot)</label>
+        </div>
+
+        <div class="question">
+            <p><b>2. Какая библиотека является асинхронной для написания ботов?</b></p>
+            <label><input type="radio" name="q2" value="wrong"> telebot</label>
+            <label><input type="radio" name="q2" value="correct"> aiogram</label>
+            <label><input type="radio" name="q2" value="wrong"> pandas</label>
+        </div>
+
+        <div class="question">
+            <p><b>3. Что такое API Token?</b></p>
+            <label><input type="radio" name="q3" value="wrong"> Имя бота</label>
+            <label><input type="radio" name="q3" value="correct"> Уникальный «ключ» для управления ботом</label>
+            <label><input type="radio" name="q3" value="wrong"> Ссылка на аватарку бота</label>
+        </div>
+
+        <button type="button" onclick="calculateResult()">Проверить ответы</button>
+    </form>
+    <div
+Error 404 (Not Found)!!1
+googleapis.com
+
+
+id="result"></div>
+</div>
+
+<script>
+    function calculateResult() {
+        const form = document.getElementById('quizForm');
+        let score = 0;
+        const total = 3;
+
+        const answers = new FormData(form);
+        for (let value of answers.values()) {
+            if (value === 'correct') score++;
+        }
+
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = `Твой результат: ${score} из ${total}`;
+        
+        if(score === total) {
+            resultDiv.style.color = "#28a745";
+            resultDiv.innerHTML += " — Отлично! Ты настоящий прораб ботов! 🤖";
+        } else {
+            resultDiv.style.color = "#ffc107";
+            resultDiv.innerHTML += " — Неплохо, но можно повторить теорию.";
+        }
+    }
+</script>
+
+</body>
+</html>
